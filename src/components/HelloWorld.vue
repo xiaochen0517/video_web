@@ -1,14 +1,19 @@
 <template>
     <div class="hello">
         <button @click="test">test</button>
+        <ali-validate />
     </div>
 </template>
 
 <script>
-import https from "@/requests/https"
+import https from "@/requests/https";
+import AliValidate from "@/components/AliValidate";
 
 export default {
     name: 'HelloWorld',
+    components: {
+        AliValidate,
+    },
     props: {
         msg: String
     },

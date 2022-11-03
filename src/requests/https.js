@@ -1,5 +1,6 @@
 //引入 axios
 import axios from "axios";
+import store from "@/store";
 
 const http = axios.create({
     baseURL: "/api",
@@ -12,7 +13,7 @@ http.interceptors.request.use(
         console.log(config);
         // config.headers["Content-Type"] = "application/x-www-form-urlencoded";
         config.headers["Content-Type"] = "application/json";
-        config.headers.Token = "";
+        config.headers.Token = store.state.token;
         return config;
     },
     (error) => {
