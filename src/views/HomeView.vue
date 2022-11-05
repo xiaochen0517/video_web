@@ -1,7 +1,9 @@
 <template>
-    <div class="home">
+    <div class="home-view">
         <top-bar />
         <top-banner />
+        <home-menu />
+        <home-reco-video />
         <br>
         <video-card />
         <br>
@@ -12,8 +14,10 @@
 <script>
 import TopBar from "@/components/main/TopBar";
 import BottomFooter from "@/components/main/BottomFooter";
-import VideoCard from '@/components/main/VideoCard.vue';
-import TopBanner from '@/components/main/TopBanner.vue';
+import VideoCard from '@/components/main/VideoCard';
+import TopBanner from '@/components/home/TopBanner';
+import HomeRecoVideo from '@/components/home/HomeRecoVideo';
+import HomeMenu from '@/components/home/HomeMenu.vue';
 
 export default {
     name: 'HomeView',
@@ -21,7 +25,9 @@ export default {
         TopBar,
         BottomFooter,
         VideoCard,
-        TopBanner
+        TopBanner,
+        HomeRecoVideo,
+        HomeMenu,
     },
     data() {
         return {
@@ -34,6 +40,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+.home-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 </style>

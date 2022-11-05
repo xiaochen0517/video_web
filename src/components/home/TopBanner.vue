@@ -12,6 +12,7 @@ export default {
 
 <style lang="less" scoped>
 .top-banner{
+    width: 100%;
     
     .banner-img{
         width: 100%;

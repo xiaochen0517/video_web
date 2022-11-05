@@ -56,6 +56,7 @@ export default {
 
 <style lang="less" scoped>
 .bottom-footer {
+    width: 100%;
     background-color: @gray-level-2;
     cursor: default;
 }

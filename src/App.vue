@@ -17,7 +17,12 @@ body {
     margin: 0;
     padding: 0;
     color: @font-black-color;
-    font-family: 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', sans-serif !important;
+    font-family: 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', sans-serif, "iconfont" !important;
     font-size: 14px;
+}
+
+.iconfont{
+    font-size: 16px;
+    font-style: normal;
 }
 </style>

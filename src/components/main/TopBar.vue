@@ -1,26 +1,28 @@
 <template>
-    <div class="top-bar flex-row">
-        <div class="left-box flex-row">
-            <img class="logo-img" :src="logoPath" type="image/svg+xml" />
-            <div class="left-menu-box flex-row">
-                <div class="left-menu-item"><span>测试测试测</span></div>
-                <div class="left-menu-item"><span>测试测试测</span></div>
-                <div class="left-menu-item"><span>测试测试测</span></div>
-                <div class="left-menu-item"><span>测试测试测</span></div>
-                <div class="left-menu-item"><span>测试测试测</span></div>
+    <div class="top-bar">
+        <div class="top-bar-content flex-row">
+            <div class="left-box flex-row">
+                <img class="logo-img" :src="logoPath" type="image/svg+xml" />
+                <div class="left-menu-box flex-row">
+                    <div class="left-menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item"><span>测试测试测</span></div>
+                </div>
             </div>
-        </div>
-        <search-box class="search-box" />
-        <div class="right-box flex-row">
-            <div class="my-box">
-                <img class="avatar-img" src="" alt="">
-            </div>
-            <div class="right-menu-box flex-row">
-                <div class="right-menu-item"><span>测试测试测</span></div>
-                <div class="right-menu-item"><span>测试测试测</span></div>
-                <div class="right-menu-item"><span>测试测试测</span></div>
-                <div class="right-menu-item"><span>测试测试测</span></div>
-                <div class="right-menu-item"><span>测试测试测</span></div>
+            <search-box class="search-box" />
+            <div class="right-box flex-row">
+                <div class="my-box">
+                    <img class="avatar-img" src="" alt="">
+                </div>
+                <div class="right-menu-box flex-row">
+                    <div class="right-menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item"><span>测试测试测</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -49,13 +51,22 @@ export default {
 <style lang="less" scoped>
 .top-bar {
     height: 64px;
-    align-items: center;
-    justify-content: space-between;
     font-size: @default-font-size;
     font-weight: @default-font-weight;
     text-align: center;
-    box-shadow: 0px 4px 4px @gray-level-3;
-    padding: 0 20px;
+
+    .top-bar-content {
+        height: 64px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 3px 10px #00000077;
+        background-color: @white-color;
+        padding: 0 20px;
+    }
 
     .left-box {
         height: 100%;
@@ -85,7 +96,7 @@ export default {
                     animation: jump .5s 0s ease both;
                 }
 
-                span{
+                span {
                     height: min-content;
                 }
             }
@@ -129,7 +140,7 @@ export default {
                     animation: jump .5s 0s ease both;
                 }
 
-                span{
+                span {
                     height: min-content;
                 }
             }
