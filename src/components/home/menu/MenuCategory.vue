@@ -16,29 +16,51 @@ export default {
 
 <style lang="less" scoped>
 .menu-category {
-    padding: 35px 0;
+    height: 100%;
     color: @font-gray-1-color;
     line-height: 26px;
     text-align: center;
 
-    .category-list{
+    .category-list {
         height: 100%;
         flex-wrap: wrap;
-        align-content: space-between;
+        align-content: space-around;
 
-        .list-item{
+        .list-item {
             width: 90px;
-            background-color: @gray-level-2;
+            background-color: @gray-level-1;
             border: 1px solid @gray-level-1;
             border-radius: 5px;
             margin-right: 10px;
+            cursor: pointer;
+            animation: hoverColorChangeLight .3s .0s ease-out both;
 
-            .item-label{
+            &:hover{
+                animation: hoverColorChangeDark .3s .0s ease-out both;
+            }
+
+            .item-label {
                 width: 100%;
             }
         }
+    }
+}
 
-        // &:nth-child(){}
+@keyframes hoverColorChangeDark {
+    0%{
+        background-color: @gray-level-1;
+    }
+    100%{
+        background-color: @gray-level-2;
+    }
+}
+
+@keyframes hoverColorChangeLight {
+    0%{
+        background-color: @gray-level-2;
+    }
+    100%{
+        background-color: @gray-level-1;
     }
 }
 </style>

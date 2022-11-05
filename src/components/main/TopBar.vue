@@ -56,16 +56,18 @@ export default {
     text-align: center;
 
     .top-bar-content {
+        min-width: 1200px;
+        width: 100%;
         height: 64px;
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
         align-items: center;
         justify-content: space-between;
         box-shadow: 0px 3px 10px #00000077;
         background-color: @white-color;
         padding: 0 20px;
+        z-index: 100;
     }
 
     .left-box {

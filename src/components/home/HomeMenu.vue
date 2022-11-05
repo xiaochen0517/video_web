@@ -20,7 +20,9 @@
                 <div class="label-text">公告</div>
             </div>
         </div>
-        <menu-category />
+        <div class="center-menu">
+            <menu-category />
+        </div>
     </div>
 </template>
 
@@ -37,16 +39,16 @@ export default {
 
 <style lang="less" scoped>
 .home-menu {
-    max-width: 1200px;
-    min-width: 1200px;
-    width: 100%;
-    // background-color: blue;
+    width: 1200px;
+    height: 140px;
 
     .left-big-menu {
-        padding: 35px 0px;
+        flex: 2;
+        justify-content: space-between;
+        align-items: center;
 
         .big-button-box {
-            margin-right: 30px;
+            cursor: pointer;
 
             .big-button-icon {
                 width: 46px;
@@ -57,6 +59,11 @@ export default {
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 5px;
+                animation: changeDefault .3s .1s ease-out both;
+
+                &:hover {
+                    animation: changeWhite .3s .1s ease-out both;
+                }
 
                 .icon {
                     font-size: 22px;
@@ -64,19 +71,45 @@ export default {
                 }
             }
 
-            .button-icon-channel{
+            .button-icon-channel {
                 background-color: @skyblue-color;
             }
 
-            .button-icon-notice{
+            .button-icon-notice {
                 background-color: @green-color;
             }
 
-            .label-text{
+            .label-text {
                 width: 100%;
                 text-align: center;
             }
         }
+    }
+
+    .center-menu {
+        flex: 9;
+        margin-left: 30px;
+        padding: 35px 0;
+    }
+}
+
+@keyframes changeWhite {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 80%;
+    }
+}
+
+@keyframes changeDefault {
+    0% {
+        opacity: 80%;
+    }
+
+    100% {
+        opacity: 100%;
     }
 }
 </style>

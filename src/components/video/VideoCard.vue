@@ -40,8 +40,10 @@ export default {
 <style lang="less" scoped>
 .video-card {
     background-color: gray;
-    width: 267px;
-    height: 150px;
+    min-width: 270px;
+    min-height: 150px;
+    max-width: 380px;
+    max-height: 213px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -67,7 +69,7 @@ export default {
         height: 38px;
         color: @font-white-color;
         background-color: #FFFFFF00;
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%);
         animation: showbox .2s 0s ease-out both;
         
         >div {

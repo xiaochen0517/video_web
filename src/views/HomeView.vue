@@ -2,21 +2,20 @@
     <div class="home-view">
         <top-bar />
         <top-banner />
-        <home-menu />
-        <home-reco-video />
-        <br>
-        <video-card />
-        <br>
+        <div class="home-content">
+            <home-menu />
+            <home-reco-video />
+            <br>
+        </div>
         <bottom-footer />
     </div>
 </template>
 
 <script>
-import TopBar from "@/components/main/TopBar";
-import BottomFooter from "@/components/main/BottomFooter";
-import VideoCard from '@/components/main/VideoCard';
-import TopBanner from '@/components/home/TopBanner';
-import HomeRecoVideo from '@/components/home/HomeRecoVideo';
+import TopBar from "@/components/main/TopBar.vue";
+import BottomFooter from "@/components/main/BottomFooter.vue";
+import TopBanner from '@/components/home/TopBanner.vue';
+import HomeRecoVideo from '@/components/home/HomeRecoVideo.vue';
 import HomeMenu from '@/components/home/HomeMenu.vue';
 
 export default {
@@ -24,7 +23,6 @@ export default {
     components: {
         TopBar,
         BottomFooter,
-        VideoCard,
         TopBanner,
         HomeRecoVideo,
         HomeMenu,
@@ -33,7 +31,7 @@ export default {
         return {
         }
     },
-    mounted() {},
+    mounted() { },
     methods: {
 
     }
@@ -41,9 +39,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home-view{
+.home-view {
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 2000px;
+    }
 }
 </style>

@@ -59,10 +59,31 @@ export default {
         display: flex;
         justify-content: center;
         justify-items: center;
+        animation: changeDefault .3s .0s ease-out both;
 
         &:hover {
-            background-color: @gray-level-2;
+            animation: changeGray .3s .0s ease-out both;
         }
+    }
+}
+
+@keyframes changeGray {
+    0% {
+        background-color: @transparent-color;
+    }
+
+    100% {
+        background-color: @gray-level-2;
+    }
+}
+
+@keyframes changeDefault {
+    0% {
+        background-color: @gray-level-2;
+    }
+    
+    100% {
+        background-color: @transparent-color;
     }
 }
 </style>
