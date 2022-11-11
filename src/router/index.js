@@ -6,15 +6,17 @@ const routes = [
         path: "/",
         name: "home",
         component: HomeView,
+        meta: {
+            title: "首页-" + process.env.VUE_APP_TITLE,
+        },
     },
     {
         path: "/about",
         name: "about",
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-            import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+        component: () => import("../views/AboutView.vue"),
+        meta: {
+            title: "关于我们-" + process.env.VUE_APP_TITLE,
+        },
     },
     {
         path: "/login",
@@ -22,6 +24,14 @@ const routes = [
         component: () => import("../views/LoginView.vue"),
         meta: {
             title: "用户登录-" + process.env.VUE_APP_TITLE,
+        },
+    },
+    {
+        path: "/register",
+        name: "register",
+        component: () => import("../views/RegisterView.vue"),
+        meta: {
+            title: "用户注册-" + process.env.VUE_APP_TITLE,
         },
     },
 ];

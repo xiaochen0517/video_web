@@ -24,14 +24,12 @@ export default {
 
 <style lang="less" scoped>
 .home-video-card {
-    width: 380px;
 
     .video-card {
-        width: 380px;
-        height: 213px;
     }
 
     .title {
+        width: 100%;
         height: 40px;
         font-size: 16px;
         font-weight: 500;

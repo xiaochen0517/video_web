@@ -40,27 +40,25 @@ export default {
 <style lang="less" scoped>
 .video-card {
     background-color: gray;
-    min-width: 270px;
-    min-height: 150px;
-    max-width: 380px;
-    max-height: 213px;
+    background-color: gray;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    
+
     &:hover {
         .bottom-box {
             animation: disappear .2s 0s ease-out both;
         }
     }
-    
-    &:leave
-    
-    .video-img {
+
+    &:leave .video-img {
         width: 100%;
         height: 100%;
     }
-    
+
     .bottom-box {
         position: absolute;
         bottom: 0;
@@ -71,18 +69,18 @@ export default {
         background-color: #FFFFFF00;
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%);
         animation: showbox .2s 0s ease-out both;
-        
+
         >div {
             align-items: center;
         }
 
         .view-count-box {
-            flex: 5;
+            flex: 7;
             padding-left: 10px;
         }
 
         .barrage-count-box {
-            flex: 5;
+            flex: 7;
         }
 
         .time-count-box {
@@ -93,24 +91,25 @@ export default {
     }
 }
 
-@keyframes disappear{
+@keyframes disappear {
     0% {
         opacity: 100%;
     }
+
     100% {
         opacity: 0%;
         display: none;
     }
 }
 
-@keyframes showbox{
+@keyframes showbox {
     0% {
         opacity: 0%;
     }
+
     100% {
         opacity: 100%;
         display: block;
     }
 }
-
 </style>

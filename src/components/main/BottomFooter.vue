@@ -69,7 +69,7 @@ export default {
 
         .title {
             color: @font-gray-color;
-            margin: 0 10px;
+            margin: 10px 10px;
         }
 
         .list-box {

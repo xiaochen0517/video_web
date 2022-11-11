@@ -1,6 +1,6 @@
 <template>
-    <div class="home-menu flex-row">
-        <div class="left-big-menu flex-row">
+    <div class="home-menu">
+        <div class="left-big-menu">
             <div class="big-button-box">
                 <div class="big-button-icon">
                     <i class="iconfont icon icon-hot">&#xe621;</i>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import MenuCategory from '@/components/home/menu/MenuCategory'
+import MenuCategory from '@/components/home/menu/MenuCategory.vue'
 
 export default {
     name: "HomeMenu",
@@ -39,13 +39,20 @@ export default {
 
 <style lang="less" scoped>
 .home-menu {
-    width: 1200px;
+    min-width: 1040px;
+    max-width: 2000px;
     height: 140px;
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
 
     .left-big-menu {
-        flex: 2;
-        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
 
         .big-button-box {
             cursor: pointer;
@@ -85,11 +92,8 @@ export default {
             }
         }
     }
-
     .center-menu {
-        flex: 9;
-        margin-left: 30px;
-        padding: 35px 0;
+        width: 100%;
     }
 }
 
