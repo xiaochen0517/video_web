@@ -1,5 +1,5 @@
 <template>
-    <div class="video-card">
+    <div class="video-card cursor-pointer">
         <img class="video-img" src="" alt="">
         <div class="bottom-box flex-row">
             <div class="view-count-box flex-row">

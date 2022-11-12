@@ -2,26 +2,27 @@
     <div class="top-bar">
         <div class="top-bar-content flex-row">
             <div class="left-box flex-row">
-                <img class="logo-img" :src="logoPath" type="image/svg+xml" />
+                <img class="logo-img" :src="logoPath" type="image/svg+xml" @click="jumpToHomeView" />
                 <div class="left-menu-box flex-row">
-                    <div class="left-menu-item"><span>测试测试测</span></div>
-                    <div class="left-menu-item"><span>测试测试测</span></div>
-                    <div class="left-menu-item"><span>测试测试测</span></div>
-                    <div class="left-menu-item"><span>测试测试测</span></div>
-                    <div class="left-menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="left-menu-item menu-item"><span>测试测试测</span></div>
                 </div>
             </div>
             <search-box class="search-box" />
             <div class="right-box flex-row">
                 <div class="my-box">
                     <img class="avatar-img" src="" alt="">
+                    <my-menu class="my-menu" />
                 </div>
                 <div class="right-menu-box flex-row">
-                    <div class="right-menu-item"><span>测试测试测</span></div>
-                    <div class="right-menu-item"><span>测试测试测</span></div>
-                    <div class="right-menu-item"><span>测试测试测</span></div>
-                    <div class="right-menu-item"><span>测试测试测</span></div>
-                    <div class="right-menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item menu-item"><span>测试测试测</span></div>
+                    <div class="right-menu-item menu-item"><span>测试测试测</span></div>
                 </div>
             </div>
         </div>
@@ -30,11 +31,15 @@
 
 <script>
 import SearchBox from '@/components/main/SearchBox';
+import { ArrowRightBold } from '@element-plus/icons-vue';
+import MyMenu from '@/components/main/topbar/MyMenu.vue';
 
 export default {
     name: "TopBar",
     components: {
-        SearchBox
+        SearchBox,
+        ArrowRightBold,
+        MyMenu,
     },
     data() {
         return {
@@ -43,7 +48,9 @@ export default {
     },
     mounted() { },
     methods: {
-
+        jumpToHomeView(){
+            this.$router.push("/");
+        }
     }
 }
 </script>
@@ -57,7 +64,7 @@ export default {
 
     .top-bar-content {
         min-width: 1200px;
-        width: 100%;
+        width: 98%;
         height: 64px;
         position: fixed;
         top: 0;
@@ -66,7 +73,7 @@ export default {
         justify-content: space-between;
         box-shadow: 0px 3px 10px #00000077;
         background-color: @white-color;
-        padding: 0 20px;
+        padding: 0 1%;
         z-index: 100;
     }
 
@@ -116,12 +123,17 @@ export default {
         .my-box {
             margin-left: 20px;
             margin-right: 10px;
+            position: relative;
 
             .avatar-img {
                 background-color: gray;
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+            }
+
+            .avatar-img:hover + .my-menu {
+                animation: showMyMenu .5s 0s ease-out both;
             }
         }
 
@@ -147,19 +159,6 @@ export default {
                 }
             }
         }
-    }
-}
-
-@keyframes jump {
-
-    0%,
-    20%,
-    100% {
-        transform: translateY(0);
-    }
-
-    60% {
-        transform: translateY(-5px);
     }
 }
 </style>

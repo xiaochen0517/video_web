@@ -31,7 +31,7 @@ export default {
             itemSize: 6,
         };
     },
-    mounted() {}
+    mounted() { }
 }
 </script>
 
@@ -65,21 +65,37 @@ export default {
         // .video-box {}
     }
 
-    @media screen and (max-width: 1920px) {
+    @media screen and (max-width: 1500px) {
         .main-box {
             grid-template-columns: 40% repeat(2, minmax(270px, 1fr));
             grid-template-areas:
                 "a b c"
                 "a e f";
+
+            .video-box:nth-last-child(1) {
+                display: none;
+            }
+
+            .video-box:nth-last-child(2) {
+                display: none;
+            }
         }
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1500px) {
         .main-box {
             grid-template-columns: 40% repeat(3, minmax(270px, 1fr));
             grid-template-areas:
                 "a b c d"
                 "a e f g";
+
+            .video-box:nth-last-child(1) {
+                display: flex;
+            }
+
+            .video-box:nth-last-child(2) {
+                display: flex;
+            }
         }
     }
 

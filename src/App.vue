@@ -20,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     color: @font-black-color;
-    font-family: 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', sans-serif, "iconfont" !important;
+    font-family: 'PingFang SC', 'HarmonyOS', 'Helvetica Neue', 'Microsoft YaHei', sans-serif, "iconfont" !important;
     font-size: 14px;
 }
 

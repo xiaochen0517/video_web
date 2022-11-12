@@ -34,6 +34,30 @@ const routes = [
             title: "用户注册-" + process.env.VUE_APP_TITLE,
         },
     },
+    {
+        path: "/search",
+        name: "search",
+        component: () => import("../views/SearchView.vue"),
+        meta: {
+            title: "搜索-" + process.env.VUE_APP_TITLE,
+        },
+    },
+    {
+        path: "/article",
+        name: "article",
+        component: () => import("../views/content/ArticleView.vue"),
+        meta: {
+            title: "文章-" + process.env.VUE_APP_TITLE,
+        },
+    },
+    {
+        path: "/video",
+        name: "video",
+        component: () => import("../views/content/VideoView.vue"),
+        meta: {
+            title: "视频-" + process.env.VUE_APP_TITLE,
+        },
+    },
 ];
 
 const router = createRouter({
