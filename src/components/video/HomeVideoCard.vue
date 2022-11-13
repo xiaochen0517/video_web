@@ -33,8 +33,6 @@ export default {
 <style lang="less" scoped>
 .home-video-card {
 
-    .video-card {}
-
     .title {
         width: 100%;
         height: 40px;

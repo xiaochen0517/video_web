@@ -1,9 +1,13 @@
 <template>
     <div class="my-menu">
         <div class="my-level">
-            <div class="level-label">
-                <div class="current-level"></div>
-                <div class="next-level"></div>
+            <div class="level-label flex-row">
+                <div class="current-level">
+                    <level-label :level="5"/>
+                </div>
+                <div class="next-level">
+                    <level-label :level="6"/>
+                </div>
             </div>
             <div class="my-exp-bar"></div>
         </div>
@@ -46,11 +50,13 @@
 
 <script>
 import { ArrowRightBold } from '@element-plus/icons-vue';
+import LevelLabel from '@/components/user/LevelLabel.vue';
 
 export default {
     name: "MyMenu",
     components: {
         ArrowRightBold,
+        LevelLabel,
     },
 }
 </script>
@@ -66,12 +72,29 @@ export default {
     border: 1px solid @gray-level-2;
     position: absolute;
     top: 60px;
-    left: -80px;
+    left: -100px;
     animation: hideMyMenu .3s .2s ease-out both;
 
     &:hover {
         animation: none;
         opacity: 1;
+    }
+
+    .my-level{
+        margin-bottom: 20px;
+        padding: 0 15px;
+
+        .level-label{
+            justify-content: space-between;
+        }
+
+        .my-exp-bar{
+            width: 100%;
+            height: 5px;
+            background-color: @pink-color;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
     }
 
     .my-number-info{

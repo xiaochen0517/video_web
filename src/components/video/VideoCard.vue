@@ -8,7 +8,7 @@
                 </el-icon>
                 <span>300万</span>
             </div>
-            <div class="barrage-count-box flex-row">
+            <div class="danmu-count-box flex-row">
                 <el-icon>
                     <Promotion />
                 </el-icon>
@@ -79,7 +79,7 @@ export default {
             padding-left: 10px;
         }
 
-        .barrage-count-box {
+        .danmu-count-box {
             flex: 7;
         }
 

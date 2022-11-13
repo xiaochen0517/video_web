@@ -27,5 +27,6 @@ body {
 .iconfont{
     font-size: 16px;
     font-style: normal;
+    font-family: "iconfont" !important;
 }
 </style>
